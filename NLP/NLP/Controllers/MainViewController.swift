@@ -25,6 +25,8 @@ class MainViewController: UITableViewController {
             vc.viewModel = TestViewModel(type: .lemmatization)
         case 3:
             vc.viewModel = TestViewModel(type: .sentenceDetection)
+        case 4:
+            vc.viewModel = TestViewModel(type: .languageHypotheses)
         default:
             vc.viewModel = TestViewModel(type: .languageIdentification)
         }

@@ -13,6 +13,7 @@ enum NLPType {
     case tokenization
     case lemmatization
     case sentenceDetection
+    case languageHypotheses
 }
 class TestViewModel {
     let type: NLPType
@@ -31,6 +32,8 @@ class TestViewModel {
             return lemmatize(text: text)
         case .sentenceDetection:
             return splitSentences(text: text)
+        case .languageHypotheses:
+            return languageHypotheses(text: text)
         }
     }
 }

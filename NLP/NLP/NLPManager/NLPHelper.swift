@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NaturalLanguage
 
 func getLanguage(text: String) -> String {
     let tagger = NSLinguisticTagger(tagSchemes: [.language], options: 0)
@@ -57,3 +58,13 @@ func splitSentences(text: String) -> String {
     return str
 }
 
+func languageHypotheses(text: String, maximum: Int = 3) -> String {
+    let recognizer = NLLanguageRecognizer()
+    recognizer.processString(text)
+    let hypotheses = recognizer.languageHypotheses(withMaximum: maximum).sorted { $0.value > $1.value }
+    var str = "Possible languages: "
+    for (language, probability) in hypotheses {
+        str += "\(language.rawValue) (\(Int((probability * 100).rounded()))%),"
+    }
+    return str
+}

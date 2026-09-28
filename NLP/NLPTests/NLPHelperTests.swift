@@ -49,4 +49,25 @@ class NLPHelperTests: XCTestCase {
     func testSplitSentencesReturnsOnlyPrefixForEmptyText() {
         XCTAssertEqual(splitSentences(text: ""), "Sentences:")
     }
+
+    func testLanguageHypothesesListsMostLikelyLanguageFirst() {
+        let result = languageHypotheses(text: "Hello, how are you today? I hope you are doing well.")
+        XCTAssertTrue(result.hasPrefix("Possible languages: en ("), result)
+    }
+
+    func testLanguageHypothesesRecognizesTurkish() {
+        let result = languageHypotheses(text: "Merhaba, bugün nasılsın? Umarım iyisindir.")
+        XCTAssertTrue(result.hasPrefix("Possible languages: tr ("), result)
+    }
+
+    func testLanguageHypothesesReturnsAtMostMaximumLanguages() {
+        let result = languageHypotheses(text: "Hello, how are you today?", maximum: 2)
+        let entries = result.components(separatedBy: "%),").count - 1
+        XCTAssertGreaterThan(entries, 0, result)
+        XCTAssertLessThanOrEqual(entries, 2, result)
+    }
+
+    func testLanguageHypothesesReturnsOnlyPrefixForEmptyText() {
+        XCTAssertEqual(languageHypotheses(text: ""), "Possible languages: ")
+    }
 }

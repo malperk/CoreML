@@ -28,4 +28,9 @@ class TestViewModelTests: XCTestCase {
         let viewModel = TestViewModel(type: .sentenceDetection)
         XCTAssertEqual(viewModel.processText(text: sampleText), splitSentences(text: sampleText))
     }
+
+    func testLanguageHypothesesUsesLanguageHypotheses() {
+        let viewModel = TestViewModel(type: .languageHypotheses)
+        XCTAssertEqual(viewModel.processText(text: sampleText), languageHypotheses(text: sampleText))
+    }
 }
