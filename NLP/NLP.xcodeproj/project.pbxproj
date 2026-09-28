@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016EC06138C11F3966B6B49A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4489ECF8EFA19F3FC4A0D527 /* Foundation.framework */; };
+		6F4DF4905F12608B1B9D77A0 /* TestViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFD1160C047E8B3D808BA8 /* TestViewModelTests.swift */; };
 		E47D53A71F8E2D7D0033FF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D53A61F8E2D7D0033FF03 /* AppDelegate.swift */; };
 		E47D53AC1F8E2D7D0033FF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47D53AA1F8E2D7D0033FF03 /* Main.storyboard */; };
 		E47D53AE1F8E2D7D0033FF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47D53AD1F8E2D7D0033FF03 /* Assets.xcassets */; };
@@ -15,9 +17,23 @@
 		E47D53C31F8E33F70033FF03 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D53C21F8E33F70033FF03 /* TestViewModel.swift */; };
 		E47D53C51F8F3A930033FF03 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D53C41F8F3A930033FF03 /* MainViewController.swift */; };
 		E47D53C81F8F3E5C0033FF03 /* NLPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D53C71F8F3E5C0033FF03 /* NLPHelper.swift */; };
+		EAFEE15FCD54AD5287C489BB /* NLPHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3C4620A14C97B43F9FECFA /* NLPHelperTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1261EA002F94EB8BFB7CDBD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E47D539B1F8E2D7D0033FF03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E47D53A21F8E2D7D0033FF03;
+			remoteInfo = NLP;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3BEFD1160C047E8B3D808BA8 /* TestViewModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestViewModelTests.swift; sourceTree = "<group>"; };
+		4489ECF8EFA19F3FC4A0D527 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9B3C4620A14C97B43F9FECFA /* NLPHelperTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NLPHelperTests.swift; sourceTree = "<group>"; };
 		E47D53A31F8E2D7D0033FF03 /* NLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47D53A61F8E2D7D0033FF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E47D53AB1F8E2D7D0033FF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +44,7 @@
 		E47D53C21F8E33F70033FF03 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		E47D53C41F8F3A930033FF03 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E47D53C71F8F3E5C0033FF03 /* NLPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPHelper.swift; sourceTree = "<group>"; };
+		F11DC202B8B947AE40C9742C /* NLPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NLPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,14 +55,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD80B0885C232D1BFA80419A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016EC06138C11F3966B6B49A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0239D3F2383EBDEB0E342EB4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4489ECF8EFA19F3FC4A0D527 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		68CAAC76207C7E4F85959283 /* NLPTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B3C4620A14C97B43F9FECFA /* NLPHelperTests.swift */,
+				3BEFD1160C047E8B3D808BA8 /* TestViewModelTests.swift */,
+			);
+			name = NLPTests;
+			path = NLPTests;
+			sourceTree = "<group>";
+		};
+		7052C2DFEDA4AB9AADB024C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0239D3F2383EBDEB0E342EB4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E47D539A1F8E2D7D0033FF03 = {
 			isa = PBXGroup;
 			children = (
 				E47D53A51F8E2D7D0033FF03 /* NLP */,
 				E47D53A41F8E2D7D0033FF03 /* Products */,
+				7052C2DFEDA4AB9AADB024C8 /* Frameworks */,
+				68CAAC76207C7E4F85959283 /* NLPTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E47D53A31F8E2D7D0033FF03 /* NLP.app */,
+				F11DC202B8B947AE40C9742C /* NLPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +154,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1CC4DA2EEFB64B8DFF535D2E /* NLPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E6CF6B6A8C654158952B3E0 /* Build configuration list for PBXNativeTarget "NLPTests" */;
+			buildPhases = (
+				CFB98360C11F778986F9EBA5 /* Sources */,
+				FD80B0885C232D1BFA80419A /* Frameworks */,
+				B678D417A62301616C6C5BF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AEABE5294C3C9541D5BDADC /* PBXTargetDependency */,
+			);
+			name = NLPTests;
+			productName = NLPTests;
+			productReference = F11DC202B8B947AE40C9742C /* NLPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E47D53A21F8E2D7D0033FF03 /* NLP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47D53B51F8E2D7D0033FF03 /* Build configuration list for PBXNativeTarget "NLP" */;
@@ -127,6 +199,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Coda;
 				TargetAttributes = {
+					1CC4DA2EEFB64B8DFF535D2E = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = E47D53A21F8E2D7D0033FF03;
+					};
 					E47D53A21F8E2D7D0033FF03 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -147,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				E47D53A21F8E2D7D0033FF03 /* NLP */,
+				1CC4DA2EEFB64B8DFF535D2E /* NLPTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B678D417A62301616C6C5BF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E47D53A11F8E2D7D0033FF03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +249,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CFB98360C11F778986F9EBA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFEE15FCD54AD5287C489BB /* NLPHelperTests.swift in Sources */,
+				6F4DF4905F12608B1B9D77A0 /* TestViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E47D539F1F8E2D7D0033FF03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +271,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AEABE5294C3C9541D5BDADC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NLP;
+			target = E47D53A21F8E2D7D0033FF03 /* NLP */;
+			targetProxy = 1261EA002F94EB8BFB7CDBD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E47D53AA1F8E2D7D0033FF03 /* Main.storyboard */ = {
@@ -199,6 +301,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		098FDAE7CECABCEC893AF2B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coda.NLPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NLP.app/NLP";
+			};
+			name = Debug;
+		};
+		C7B740B22AEC7B893E6FD46E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coda.NLPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NLP.app/NLP";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		E47D53B31F8E2D7D0033FF03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E6CF6B6A8C654158952B3E0 /* Build configuration list for PBXNativeTarget "NLPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B740B22AEC7B893E6FD46E /* Release */,
+				098FDAE7CECABCEC893AF2B0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E47D539E1F8E2D7D0033FF03 /* Build configuration list for PBXProject "NLP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
