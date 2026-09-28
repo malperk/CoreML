@@ -12,7 +12,6 @@
 		E47D538A1F8DFB9A0033FF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47D53881F8DFB9A0033FF03 /* Main.storyboard */; };
 		E47D538C1F8DFB9A0033FF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47D538B1F8DFB9A0033FF03 /* Assets.xcassets */; };
 		E47D538F1F8DFB9A0033FF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47D538D1F8DFB9A0033FF03 /* LaunchScreen.storyboard */; };
-		E47D53991F8E20730033FF03 /* Oxford102.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E47D53981F8E1FD40033FF03 /* Oxford102.mlmodel */; };
 		E47D53DD1F8F51B50033FF03 /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D53DC1F8F51B50033FF03 /* UIImageHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		E47D538B1F8DFB9A0033FF03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E47D538E1F8DFB9A0033FF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E47D53901F8DFB9A0033FF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E47D53981F8E1FD40033FF03 /* Oxford102.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Oxford102.mlmodel; sourceTree = "<group>"; };
 		E47D53DC1F8F51B50033FF03 /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				E47D53DB1F8F51A80033FF03 /* Helpers */,
-				E47D53971F8E00290033FF03 /* CoreModel */,
 				E47D53961F8DFF710033FF03 /* Controllers */,
 				E47D53841F8DFB9A0033FF03 /* AppDelegate.swift */,
 				E47D53881F8DFB9A0033FF03 /* Main.storyboard */,
@@ -76,14 +73,6 @@
 				E47D53861F8DFB9A0033FF03 /* ViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E47D53971F8E00290033FF03 /* CoreModel */ = {
-			isa = PBXGroup;
-			children = (
-				E47D53981F8E1FD40033FF03 /* Oxford102.mlmodel */,
-			);
-			path = CoreModel;
 			sourceTree = "<group>";
 		};
 		E47D53DB1F8F51A80033FF03 /* Helpers */ = {
@@ -166,7 +155,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47D53991F8E20730033FF03 /* Oxford102.mlmodel in Sources */,
 				E47D53871F8DFB9A0033FF03 /* ViewController.swift in Sources */,
 				E47D53851F8DFB9A0033FF03 /* AppDelegate.swift in Sources */,
 				E47D53DD1F8F51B50033FF03 /* UIImageHelper.swift in Sources */,
@@ -243,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -294,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -309,11 +297,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V29J7LL668;
 				INFOPLIST_FILE = IntroducingCoreML/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coda.IntroducingCoreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -325,11 +313,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V29J7LL668;
 				INFOPLIST_FILE = IntroducingCoreML/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coda.IntroducingCoreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

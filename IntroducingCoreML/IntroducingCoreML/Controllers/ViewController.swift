@@ -10,7 +10,6 @@ import UIKit
 import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    let flowerModel = Oxford102()
     let imagePicker = UIImagePickerController()
 
     
@@ -18,14 +17,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var predictionLabel: UILabel!
     
     
-    lazy var classificationRequest: VNCoreMLRequest = {
-        // Load the ML model through its generated class and create a Vision request for it.
-        do {
-            let model = try VNCoreMLModel(for: Oxford102().model)
-            return VNCoreMLRequest(model: model, completionHandler: self.handleClassification)
-        } catch {
-            fatalError("can't load Vision ML model: \(error)")
-        }
+    lazy var classificationRequest: VNClassifyImageRequest = {
+        // Vision's built-in classifier, so no model file has to be bundled.
+        return VNClassifyImageRequest(completionHandler: self.handleClassification)
     }()
     
     
@@ -34,6 +28,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
     }
     @IBAction func takePictureClicked(_: Any) {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            predictionLabel.text = "Camera is not available on this device"
+            return
+        }
         imagePicker.sourceType = .camera
         imagePicker.cameraCaptureMode = .photo
         present(imagePicker, animated: true, completion: nil)
@@ -47,9 +45,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // MARK: - UIImagePickerControllerDelegate Methods
 
-    public func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+    public func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         imagePicker.dismiss(animated: true)
-        guard let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+        guard let pickedImage = info[.originalImage] as? UIImage else {
             return
         }
         guard let ciImage = CIImage(image: pickedImage)else {
