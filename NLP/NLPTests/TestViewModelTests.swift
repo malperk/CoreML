@@ -23,4 +23,9 @@ class TestViewModelTests: XCTestCase {
         let viewModel = TestViewModel(type: .lemmatization)
         XCTAssertEqual(viewModel.processText(text: sampleText), lemmatize(text: sampleText))
     }
+
+    func testSentenceDetectionUsesSplitSentences() {
+        let viewModel = TestViewModel(type: .sentenceDetection)
+        XCTAssertEqual(viewModel.processText(text: sampleText), splitSentences(text: sampleText))
+    }
 }

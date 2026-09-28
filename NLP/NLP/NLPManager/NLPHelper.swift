@@ -41,3 +41,19 @@ func lemmatize(text: String) -> String {
     return str
 }
 
+func splitSentences(text: String) -> String {
+    let tagger = NSLinguisticTagger(tagSchemes: [.tokenType], options: 0)
+    tagger.string = text
+    let range = NSRange(location: 0, length: text.utf16.count)
+    var str = "Sentences:"
+    var count = 0
+    tagger.enumerateTags(in: range, unit: .sentence, scheme: .tokenType, options: []) { _, tokenRange, _ in
+        let sentence = (text as NSString).substring(with: tokenRange).trimmingCharacters(in: .whitespacesAndNewlines)
+        if !sentence.isEmpty {
+            count += 1
+            str += "\n\(count). " + sentence
+        }
+    }
+    return str
+}
+

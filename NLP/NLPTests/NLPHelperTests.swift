@@ -35,4 +35,18 @@ class NLPHelperTests: XCTestCase {
         XCTAssertEqual(lemmatize(text: "The children were running to their houses."),
                        "Lemmas: the,child,be,run,to,their,house,")
     }
+
+    func testSplitSentencesNumbersEachSentence() {
+        XCTAssertEqual(splitSentences(text: "Hello there. How are you? I am fine!"),
+                       "Sentences:\n1. Hello there.\n2. How are you?\n3. I am fine!")
+    }
+
+    func testSplitSentencesTrimsWhitespaceAndNewlines() {
+        XCTAssertEqual(splitSentences(text: "  First line.\n\nSecond line.  "),
+                       "Sentences:\n1. First line.\n2. Second line.")
+    }
+
+    func testSplitSentencesReturnsOnlyPrefixForEmptyText() {
+        XCTAssertEqual(splitSentences(text: ""), "Sentences:")
+    }
 }
